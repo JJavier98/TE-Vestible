@@ -105,6 +105,26 @@ val = val[2:7]
 ```
 
 Con esto hecho solo nos queda establecer distintas frases o palabras que queremos decir cuando se de cierta combinación.  
+```python
+# Si flexionamos solo pulgar
+if val == '10000':
+    engine.say('Hola')
+# Si flexionamos solo índice
+elif val == '01000':
+    engine.say('Adiós')
+# Si flexionamos solo corazón
+elif val == '00100':
+    engine.say('Soy un guante que habla')
+...
+...
+# Si flexionamos índice, corazón y meñique
+elif val == '01101':
+    engine.say('Tengo hambre')
+...
+
+# Ejecutamos el TTS
+engine.runAndWait()
+```
 Como hemos dicho antes, este ejemplo en concreto se hizo para comunicarse con el asistente de Amazon, Alexa. Por eso la única sentencia que lee el código de ejemplo en un principio es _'11111'_ (puño cerrado). Esta sentencia reproduce la palabra _'Alexa'_, lo que invoca al asistente y sólo después de hacer esto el programa es capaz de leer más combinaciones para darle órdenes.
 
 # Construcción
